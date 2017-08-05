@@ -26,3 +26,9 @@ app.use(bodyParser.json({type: "application/vnd.api.json"}));
 app.listen(PORT, function(){
 	console.log("App listening on PORT: " + PORT);
 });
+
+// ==============================================================
+// Router - points sesrver to "route" files; map of how to respond when user visits or requests data from URLs
+
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
