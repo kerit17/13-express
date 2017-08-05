@@ -3,7 +3,8 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path")
+var path = require("path");
+var http = require("http");
 
 // ==============================================================
 // Express Configuration - basic properties for express server
@@ -12,7 +13,7 @@ var path = require("path")
 var app = express();
 
 //Set an initial port - will be used in listener
-var PORT = process.env.PORT || 8080;
+var PORT = 8080;
 
 //BodyParser to allow server to interpret data sent to it
 app.use(bodyParser.json());
@@ -32,3 +33,4 @@ app.listen(PORT, function(){
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
+
