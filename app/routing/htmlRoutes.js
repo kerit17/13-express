@@ -13,12 +13,14 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname, "../public/home.html"));
 	});
 	
-	// app.get("/survey", function(req, res){
-	// 	res.sendFile(path.join(__dirname, "app/public/survey.html"));
-	// });
+	app.get("/survey", function(req, res) {
+		console.log("Survey");
+		console.log(path.join(__dirname, "../public/survey.html"));
+		res.sendFile(path.join(__dirname, "../public/survey.html"));
+	});
 
 	//HTML USE route - leads to home.html when displaying the home page
-	// app.use(function(req, res){
-	// 	res.sendFile(path.join(_dirname, "/../public/home.html"));
-	// });
+	app.use(function(req, res){
+		res.sendFile(path.join(_dirname, "/../public/home.html"));
+	});
 };
