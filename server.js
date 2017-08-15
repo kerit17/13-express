@@ -12,7 +12,7 @@ var path = require("path");
 var app = express();
 
 //Set an initial port - will be used in listener
-var PORT = 8000;
+var PORT = process.env.PORT || 8000;
 
 //BodyParser to allow server to interpret data sent to it
 // app.use(bodyParser.json());
