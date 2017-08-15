@@ -2,9 +2,8 @@
 // Dependencies - npm packages needed for functionality
 
 var express = require("express");
-// var bodyParser = require("body-parser");
+var bodyParser = require("body-parser");
 var path = require("path");
-// var http = require("http");
 
 // ==============================================================
 // Express Configuration - basic properties for express server
@@ -23,15 +22,12 @@ var PORT = 8000;
 
 // ==============================================================
 // Router - points sesrver to "route" files; map of how to respond when user visits or requests data from URLs
-
-
-// require("./app/routing/apiRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 
 // ==============================================================
 // Listener - start the server
-
 app.listen(PORT, function(){
 	console.log("App listening on PORT: " + PORT);
 });

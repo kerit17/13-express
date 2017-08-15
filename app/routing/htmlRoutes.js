@@ -21,6 +21,6 @@ module.exports = function(app){
 
 	//HTML USE route - leads to home.html when displaying the home page
 	app.use(function(req, res){
-		res.sendFile(path.join(_dirname, "/../public/home.html"));
+		res.sendFile(path.join(__dirname, "/../public/home.html"));
 	});
 };
